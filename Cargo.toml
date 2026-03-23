@@ -1,0 +1,25 @@
+[package]
+name = "nexcore-homeostasis"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Self-regulating system framework inspired by biological homeostasis"
+
+[dependencies]
+nexcore-flywheel = { path = "../nexcore-flywheel" }
+nexcore-homeostasis-primitives = { path = "../nexcore-homeostasis-primitives" }
+nexcore-homeostasis-storm = { path = "../nexcore-homeostasis-storm" }
+nexcore-homeostasis-memory = { path = "../nexcore-homeostasis-memory" }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+nexcore-error = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true, features = ["sync", "time", "rt", "macros"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full", "test-util"] }
+
+[lints]
+workspace = true
